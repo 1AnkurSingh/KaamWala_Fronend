@@ -119,7 +119,7 @@ export default function CompleteProfileModal({ user, onClose, onComplete }) {
                       message: 'Please provide a valid Indian phone number' 
                     }
                   })}
-                  placeholder="e.g., +91 98765 43210"
+                  placeholder="e.g., +91 99999999991"
                 />
                 {errors.phone && (
                   <div className="invalid-feedback">{errors.phone.message}</div>
