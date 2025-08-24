@@ -184,7 +184,7 @@ export default function AboutPage() {
                     className="rounded-circle img-fluid"
                   />
                 </div>
-                <h5>Ankur Singh</h5>
+                <h5>KaamWala Team</h5>
                 <p className="text-muted">Founder & Developer</p>
                 <p className="small">
                   Passionate about technology and social impact, building solutions 

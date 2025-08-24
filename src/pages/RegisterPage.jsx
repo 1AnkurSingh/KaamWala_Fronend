@@ -232,7 +232,7 @@ const RegisterPage = () => {
                             className="form-control form-control-lg"
                             id="name"
                             name="name"
-                            placeholder="e.g., Manoj Thakur"
+                            placeholder="e.g., Manoj Kumar"
                             required
                           />
                         </div>
