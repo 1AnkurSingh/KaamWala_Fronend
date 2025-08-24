@@ -1,0 +1,262 @@
+/* src/pages/WorkersListingPage.css */
+
+.workers-listing-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 2rem;
+}
+
+.filter-group .form-label {
+  font-size: 0.9rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.filter-group .form-control,
+.filter-group .form-select {
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.filter-group .form-control:focus,
+.filter-group .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+}
+
+/* Worker Cards */
+.worker-card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.worker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.worker-avatar {
+  border: 3px solid #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.worker-details .text-muted {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.worker-details .fw-bold {
+  font-size: 0.9rem;
+  color: #2d3748;
+}
+
+/* Badges */
+.badge {
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(102, 126, 234, 0.1) !important;
+  color: #667eea !important;
+}
+
+.bg-success-subtle {
+  background-color: rgba(34, 197, 94, 0.1) !important;
+  color: #22c55e !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-outline-primary {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.btn-outline-primary:hover {
+  background-color: #667eea;
+  border-color: #667eea;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+/* Empty State */
+.empty-state {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.empty-state .fs-1 {
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.empty-state h4 {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+/* Loading States */
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Card Footer */
+.card-footer {
+  border-top: 1px solid #f1f3f4;
+  padding: 1rem;
+}
+
+.card-footer .btn {
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .filters-sidebar {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .worker-card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-footer .d-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .card-footer .btn {
+    width: 100%;
+  }
+  
+  .filters-sidebar {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .worker-avatar {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .worker-details .row {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.worker-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.worker-card:nth-child(odd) { animation-delay: 0.1s; }
+.worker-card:nth-child(even) { animation-delay: 0.2s; }
+
+/* Header Section */
+.workers-listing-page .bg-light {
+  background-color: #fff !important;
+  border-bottom: 1px solid #e9ecef !important;
+}
+
+/* Filter Enhancements */
+.filters-sidebar h5 {
+  color: #2d3748;
+  font-weight: 600;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+/* Accessibility */
+.worker-card:focus-within {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Load More Button */
+.mt-4 .btn-primary {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 25px;
+}

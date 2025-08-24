@@ -1,0 +1,234 @@
+/* src/pages/CategoriesPage.css */
+
+.categories-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box .form-control {
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box .form-control:focus {
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Category Cards */
+.category-card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.category-card:hover::before {
+  transform: scaleX(1);
+}
+
+.category-icon {
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.1);
+}
+
+.card-title {
+  transition: color 0.3s ease;
+}
+
+.category-card:hover .card-title {
+  color: #667eea !important;
+}
+
+.btn-outline-primary {
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Badge Styling */
+.badge {
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(102, 126, 234, 0.1) !important;
+}
+
+/* Stats Section */
+.stat-item {
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-item .fs-1 {
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover .fs-1 {
+  transform: scale(1.2);
+}
+
+/* Empty State */
+.empty-state {
+  padding: 3rem 2rem;
+}
+
+.empty-state .fs-1 {
+  opacity: 0.5;
+}
+
+/* Loading State */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .category-card {
+    margin-bottom: 1rem;
+  }
+  
+  .stat-item {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .row {
+    text-align: center;
+  }
+  
+  .search-box {
+    margin-top: 2rem;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.category-card:nth-child(1) { animation-delay: 0.1s; }
+.category-card:nth-child(2) { animation-delay: 0.2s; }
+.category-card:nth-child(3) { animation-delay: 0.3s; }
+.category-card:nth-child(4) { animation-delay: 0.4s; }
+.category-card:nth-child(5) { animation-delay: 0.5s; }
+.category-card:nth-child(6) { animation-delay: 0.6s; }
+.category-card:nth-child(7) { animation-delay: 0.7s; }
+.category-card:nth-child(8) { animation-delay: 0.8s; }
+.category-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Accessibility */
+.category-card:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.category-card[tabindex="0"] {
+  cursor: pointer;
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  .category-card {
+    background-color: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .card-text {
+    color: #a0aec0 !important;
+  }
+}
